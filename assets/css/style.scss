@@ -1,0 +1,462 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-background-color: #fff;
+	--primary-text-color: #000;
+	--secondary-background-color: #ddd;
+	--start-gradient: #496d4a;
+	--end-gradient: #003622;
+	--accent-color:  #93f5be;
+	--accent-button-text-color: #000;
+}
+
+body, html, ul {
+	margin: 0;
+	padding: 0;
+}
+
+/* Advanced Checkbox Hack */
+body { animation: bugfix infinite 1s; }
+@keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+body {
+	background-color: #fff;
+	color:#000;
+	background-color: var(--primary-background-color);
+	color: var(--primary-text-color);
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Inter', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+p, span, a {
+	font-size: 1.2rem;
+}
+
+.center-text {
+	text-align: center;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+	max-width: 64em;
+	padding: 1em;
+
+	width: 100%;
+	z-index: 999;
+	a {
+		color: #fff;
+		font-size: 1rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
+.white-text {
+	color: #fff;
+}
+
+
+.align-self-center {
+	align-self: center;
+}
+
+.header-logo {
+	display: inline-flex;
+    align-items: center;
+
+	img {
+		height: 2em;
+		width: 2.4em;
+	}
+
+	h1 {
+		display: inline-block;
+		font-family: 'Gotham', sans-serif;
+		text-transform: capitalize;
+		margin: 0;
+	}
+}
+
+.navigation-toggle {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	&:focus ~ .menu-icon {
+		outline: 5px auto Highlight;
+		outline: 5px auto -webkit-focus-ring-color;
+	  }
+}
+
+
+.main-navigation {
+	margin: 0 auto;
+	ul {
+		display: flex;
+		list-style-type: none;
+		align-items: center;
+		.navigation-link {
+			margin: 0 0.6em;
+			color: #fff;
+			text-align: center;
+		}
+		.wallet-link {
+			display: none;
+		}
+	}	
+}
+
+.wallet-link {
+	margin-left: auto;
+}
+
+footer {
+	background-color: #ddd;
+	color: #000;
+	background-color: var(--secondary-background-color);
+	color:var(--primary-text-color);
+}
+
+.hero {
+	background-image: linear-gradient(#496d4a, #003622) ;
+	background-image: linear-gradient(var(--start-gradient), var(--end-gradient)) ;
+	background-repeat:  no-repeat;
+	background-size: cover;
+
+	h2 {
+		font-size: 3rem;
+		margin-top: 0;	
+	}
+
+	.section-top {
+		height: 5em;
+	}
+
+	.wave-background {
+		opacity: 0.5;
+		width: 100%;
+		position: absolute;
+		bottom: -5%;
+		z-index: 1;	
+	}
+
+	.surtitle {
+		color: #93f5be;
+		color: var(--accent-color);
+		font-weight: 700;
+		&::before {
+			content: '\B7';
+			margin: 0 0.2em;
+
+		}
+		&:first-child::before{
+			content: '';
+			margin: 0;
+		}
+	}
+
+	table {
+		color: #000;
+		background-color: #fff;
+		color: var(--primary-text-color);
+		background-color: var(--primary-background-color);
+		backdrop-filter: blur(2em);
+		box-shadow: 0 1em 3em -1em rgba(0,0,0,0.4);
+		padding: 1em;
+		margin: 3em 0;
+		border-radius: 1em;
+
+		th { position: relative; }
+		td { padding: 0.5em; }
+		tr:nth-child(even) { 
+			background-color: #ddd;
+			background-color: var(--secondary-background-color);
+		}
+
+		.coin-logo-vector {
+			position: absolute;
+			height: 3em;
+			top: -3em;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.what-is-vertcoin-section {
+	position: relative;
+	margin-bottom: 1em;
+	.wave-bottom {
+		padding: 1em 1em 3em 1em;
+		background-image: linear-gradient(0deg, #496d4a, #003622) ;
+		background-image: linear-gradient(0deg, var(--start-gradient), var(--end-gradient)) ;
+	}
+	.decorative-logo {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		height: 20%;
+		max-height: 4.2em;
+	}
+}
+
+.wave-bottom {
+	clip-path:polygon(100%0%,0%0%,0%90.00%,1%90.63%,2%91.25%,3%91.87%,4%92.49%,5%93.09%,6%93.68%,7%94.26%,8%94.82%,9%95.36%,10%95.88%,11%96.37%,12%96.85%,13%97.29%,14%97.71%,15%98.09%,16%98.44%,17%98.76%,18%99.05%,19%99.30%,20%99.51%,21%99.69%,22%99.82%,23%99.92%,24%99.98%,25%100.00%,26%99.98%,27%99.92%,28%99.82%,29%99.69%,30%99.51%,31%99.30%,32%99.05%,33%98.76%,34%98.44%,35%98.09%,36%97.71%,37%97.29%,38%96.85%,39%96.37%,40%95.88%,41%95.36%,42%94.82%,43%94.26%,44%93.68%,45%93.09%,46%92.49%,47%91.87%,48%91.25%,49%90.63%,50%90.00%,51%89.37%,52%88.75%,53%88.13%,54%87.51%,55%86.91%,56%86.32%,57%85.74%,58%85.18%,59%84.64%,60%84.12%,61%83.63%,62%83.15%,63%82.71%,64%82.29%,65%81.91%,66%81.56%,67%81.24%,68%80.95%,69%80.70%,70%80.49%,71%80.31%,72%80.18%,73%80.08%,74%80.02%,75%80.00%,76%80.02%,77%80.08%,78%80.18%,79%80.31%,80%80.49%,81%80.70%,82%80.95%,83%81.24%,84%81.56%,85%81.91%,86%82.29%,87%82.71%,88%83.15%,89%83.63%,90%84.12%,91%84.64%,92%85.18%,93%85.74%,94%86.32%,95%86.91%,96%87.51%,97%88.13%,98%88.75%,99%89.37%,100%90.00%);
+}
+
+.max-width-64em {
+	max-width: 64em;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.complex-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.vertcoin-video-container {
+	background-color: #000;
+	iframe {
+		display: block;
+		margin: 0 auto;
+		border-radius: 1em;
+		width: 640px;
+		max-width: 100%;
+		height: 360px;
+	}
+}
+
+
+.section-columns {
+	display: flex;
+	position: relative;
+	width: 100%;
+	max-width: 64em;
+	min-height: 1px;
+	margin: 0 auto;
+}
+
+.section-left, .section-right {
+	flex: 1;
+	flex-basis: 50%;
+	padding: 1em;
+	z-index: 2;
+}
+
+.section-image-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		display: block;
+		width: 100%;
+		border-radius: 1em;
+	}
+}
+
+.highlight-above::before {
+	content: '';
+    display: block;
+    margin-bottom: 1em;
+	width: 4em;
+    height: 0.2em;
+	background-color: #93f5be;
+	background-color: var(--accent-color);
+}
+
+
+.card-container {
+	display: flex;
+}
+
+.card {
+	box-shadow: 0 1em 3em -1em rgba(0,0,0,0.4);
+	padding: 1em;
+	border-radius: 1em;
+	font-weight: 700;
+	background-color: #ddd;
+	color: #000;
+	background-color: var(--secondary-background-color);
+	color: var(--primary-text-color);
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.large-icon-card {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 0 1em;
+}
+
+.large-icon {
+	margin: 0.5rem;
+	background-image: -webkit-linear-gradient(45deg, var(--start-gradient), var(--end-gradient));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #003622;
+	color: var(--start-gradient);
+}
+
+.icon-card {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.brand-icon {
+	margin-right: 0.5em;
+}
+
+.default-button {
+	display: inline-block;
+	background-color: #93f5be;
+	color: #000;	
+	background-color: var(--accent-color);
+	color: var(--accent-button-text-color);	
+    text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+    border-radius: 5px;
+	padding: 0.8em 1.2em;
+	margin: 0.2em 0;
+	margin-left: 0.2em;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.tweet-container {
+	display: flex;
+	.tweet {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		margin-left: 1em;
+		&:first-child {
+			margin-left: 0;
+		}
+		iframe {
+			max-width: 100%;
+		}
+	}
+}
+
+// IE is borked, so set flex-basis to auto for tweets
+_:-ms-fullscreen, :root .tweet {
+	flex-basis: auto;
+}
+
+@media screen and (max-width: 64em) {
+	.main-navigation{
+		display: none;
+	}
+
+	.header-logo {
+		margin-right: auto;
+	}
+
+	.menu-icon::before {
+		font-size: 2.5rem;
+		content: '\2261';
+		background: #478462;
+		color: #fff;
+		border-radius: 5px;
+		padding: 0 0.5em;
+	}
+
+	.navigation-toggle:checked ~ .main-navigation{
+		display: flex;
+		position: absolute;
+		margin-left: auto;
+		top: 100%;
+		right: 1em;
+		padding: 1em;
+		background: #478462;
+		border-radius: 5px;
+
+		ul {
+			flex-direction: column;
+			align-items: flex-end;
+			width: 100%;
+		}
+		a {
+			display: block;
+			padding: 0.8em 0;
+		}
+		.navigation-link {
+			margin: 0.2em;
+			width: 100%;
+			text-align: right;
+		}
+		.wallet-link {
+			width: 100%;
+			margin: 0;
+			display: block;
+		}
+	}
+	.wallet-link {
+		display: none;
+	}
+	.section-columns{
+		flex-direction: column;
+	}
+	.section-left, .section-right {
+		flex: auto;
+		max-width: 100%;
+	}
+	.section-image-container img {
+		max-width: 40em;
+	}
+	.card-container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.large-icon-card {
+		margin: 1em;
+	}
+
+	.icon-card {
+		margin: 0.5em;
+	}
+	
+	.tweet-container {
+		flex-direction: column;
+		.tweet {
+			margin-left: 0;
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-background-color: #1f2221;
+		--primary-text-color: #eee;
+		--secondary-background-color: #313535;
+		--start-gradient: #003622;
+		--end-gradient: #496d4a;
+	}
+}
+  

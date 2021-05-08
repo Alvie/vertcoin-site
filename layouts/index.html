@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{- partial "head.html" . -}}
+        {{ $indexSass := resources.Get "css/index.scss" }}
+        {{ $indexCSS := $indexSass | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $indexCSS.Permalink }}">
+    </head>
+    <body>
+        {{- partial "header.html" . -}}
+        {{ range sort .Pages "Params.order" "asc" }}
+            {{ .Content }}
+        {{ end }}
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

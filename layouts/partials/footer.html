@@ -1,0 +1,19 @@
+<footer>
+    <div class="max-width-64em">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi iste necessitatibus consequatur neque sunt quo harum.</p>
+        <span>&copy; Vertcoin 2014 - 2021</span>
+        <span>Open Source</span>
+        <span>Created Jan 09, 2014</span>
+    </div>
+    <script>
+        // If user prefers dark mode, set tweets to dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.querySelectorAll('.twitter-tweet').forEach(
+                tweet => {
+                    tweet.setAttribute('data-theme', 'dark');
+                }
+            );
+        }
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</footer>
